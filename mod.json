@@ -1,0 +1,7 @@
+{
+    "$schema": "../config-schema.json",
+    "name": "Super Vendors",
+    "description": "Make various items purchasable by vendors.",
+    "author": "Garrett HE",
+    "version": "0.1.0"
+}
