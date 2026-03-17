@@ -3,6 +3,7 @@
     "name": "Super Vendors",
     "description": "Make various items purchasable by vendors.",
     "author": "Garrett HE",
+    "website": "https://github.com/garrett-he/SuperVendors",
     "version": "1.0.1",
     "config": [
         {
