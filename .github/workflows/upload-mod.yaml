@@ -8,6 +8,14 @@ on:
       version:
         description: 'Version number for the release'
         required: true
+      description:
+        description: 'Description for the release'
+        required: false
+        default: "Make various items purchasable by vendors."
+      file_category:
+        description: "File category for the release"
+        required: false
+        default: "main"
 
 jobs:
   upload-to-nexusmods:
@@ -17,7 +25,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Zip mod files
-        run: zip -r SuperVendors.zip src/
+        run: cd src && zip -r ../SuperVendors.zip .
 
       - name: Upload mod to NexusMods
         id: upload
@@ -26,6 +34,7 @@ jobs:
           api_key: ${{ secrets.NEXUSMODS_API_KEY }}
           file_group_id: ${{ vars.NEXUSMODS_FILE_GROUP_ID }}
           filename: SuperVendors.zip
-          display_name: SuperVendors ${{ github.event.inputs.version }} D2RMM
-          description: "Make various items purchasable by vendors."
           version: ${{ github.event.release.tag_name || github.event.inputs.version }}
+          display_name: SuperVendors ${{ github.event.inputs.version }} D2RMM
+          description: ${{ github.event.inputs.description }}
+          file_category: ${{ github.event.inputs.file_category }}
