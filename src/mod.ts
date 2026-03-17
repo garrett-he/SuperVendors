@@ -1,15 +1,18 @@
 const FILE_SPECS = [
     {
         files: ["global\\excel\\misc.txt", "global\\excel\\base\\misc.txt"],
-        groups: ["Potions", "Charms", "Gems", "Runes", "Jewels"]
+        groups: ["Potions", "Charms", "Gems", "Runes", "Jewels"],
+        clear: false
     },
     {
         files: ["global\\excel\\weapons.txt", "global\\excel\\base\\weapons.txt"],
-        groups: ["AmazonWeapons", "AssassinKatars", "SorceressOrbs"]
+        groups: ["AmazonWeapons", "AssassinKatars", "SorceressOrbs"],
+        clear: true
     },
     {
         files: ["global\\excel\\armor.txt", "global\\excel\\base\\armor.txt"],
-        groups: ["BarbarianHelms", "DruidPelts", "PaladinShields", "NecromancerHeads", "WarlockGrimoires"]
+        groups: ["BarbarianHelms", "DruidPelts", "PaladinShields", "NecromancerHeads", "WarlockGrimoires"],
+        clear: true
     }
 ];
 
@@ -71,7 +74,7 @@ FILE_SPECS.forEach(fileSpec => {
             });
         }
 
-        if (config["clearExistingSales"]) {
+        if (config["clearExistingSales"] && fileSpec.clear) {
             Object.keys(vendors).forEach(vendor => {
                 content.rows.forEach(row => {
                     row[`${vendor}Min`] = "";
