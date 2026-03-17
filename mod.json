@@ -3,5 +3,1693 @@
     "name": "Super Vendors",
     "description": "Make various items purchasable by vendors.",
     "author": "Garrett HE",
-    "version": "0.1.0"
+    "version": "1.0.0",
+    "config": [
+        {
+            "id": "sectionGlobal",
+            "type": "section",
+            "name": "Global Settings"
+        },
+        {
+            "id": "baseCost",
+            "type": "number",
+            "name": "Base Cost",
+            "description": "Base cost of on sale items, -1 = vanilla",
+            "defaultValue": -1
+        },
+        {
+            "id": "clearExistingSales",
+            "type": "checkbox",
+            "name": "Clear Existing Sales",
+            "description": "Enable this if not enough spaces for sale list.",
+            "defaultValue": false
+        },
+        {
+            "id": "chippedGemsEnabled",
+            "type": "checkbox",
+            "name": "Chipped Gems Enabled",
+            "defaultValue": false
+        },
+        {
+            "id": "flawedGemsEnabled",
+            "type": "checkbox",
+            "name": "Flawed Gems Enabled",
+            "defaultValue": false
+        },
+        {
+            "id": "standardGemsEnabled",
+            "type": "checkbox",
+            "name": "Standard Gems Enabled",
+            "defaultValue": false
+        },
+        {
+            "id": "flawlessGemsEnabled",
+            "type": "checkbox",
+            "name": "Flawless Gems Enabled",
+            "defaultValue": false
+        },
+        {
+            "id": "perfectGemsEnabled",
+            "type": "checkbox",
+            "name": "Perfect Gems Enabled",
+            "defaultValue": true
+        },
+        {
+            "id": "sectionAct1",
+            "type": "section",
+            "name": "Act I Vendors"
+        },
+        {
+            "id": "a1PotionsVendor",
+            "type": "select",
+            "name": "Potions Vendor",
+            "defaultValue": "Akara",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Akara",
+                    "value": "Akara"
+                },
+                {
+                    "label": "Charsi",
+                    "value": "Charsi"
+                },
+                {
+                    "label": "Gheed",
+                    "value": "Gheed"
+                }
+            ]
+        },
+        {
+            "id": "a1CharmsVendor",
+            "type": "select",
+            "name": "Charms Vendor",
+            "defaultValue": "Akara",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Akara",
+                    "value": "Akara"
+                },
+                {
+                    "label": "Charsi",
+                    "value": "Charsi"
+                },
+                {
+                    "label": "Gheed",
+                    "value": "Gheed"
+                }
+            ]
+        },
+        {
+            "id": "a1GemsVendor",
+            "type": "select",
+            "name": "Gems Vendor",
+            "defaultValue": "Akara",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Akara",
+                    "value": "Akara"
+                },
+                {
+                    "label": "Charsi",
+                    "value": "Charsi"
+                },
+                {
+                    "label": "Gheed",
+                    "value": "Gheed"
+                }
+            ]
+        },
+        {
+            "id": "a1RunesVendor",
+            "type": "select",
+            "name": "Runes Vendor",
+            "defaultValue": "Akara",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Akara",
+                    "value": "Akara"
+                },
+                {
+                    "label": "Charsi",
+                    "value": "Charsi"
+                },
+                {
+                    "label": "Gheed",
+                    "value": "Gheed"
+                }
+            ]
+        },
+        {
+            "id": "a1JewelsVendor",
+            "type": "select",
+            "name": "Jewels Vendor",
+            "defaultValue": "Akara",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Akara",
+                    "value": "Akara"
+                },
+                {
+                    "label": "Charsi",
+                    "value": "Charsi"
+                },
+                {
+                    "label": "Gheed",
+                    "value": "Gheed"
+                }
+            ]
+        },
+        {
+            "id": "a1AmazonWeaponsVendor",
+            "type": "select",
+            "name": "Amazon Weapons Vendor",
+            "defaultValue": "Gheed",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Akara",
+                    "value": "Akara"
+                },
+                {
+                    "label": "Charsi",
+                    "value": "Charsi"
+                },
+                {
+                    "label": "Gheed",
+                    "value": "Gheed"
+                }
+            ]
+        },
+        {
+            "id": "a1AssassinKatarsVendor",
+            "type": "select",
+            "name": "Assassin Katars Vendor",
+            "defaultValue": "Gheed",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Akara",
+                    "value": "Akara"
+                },
+                {
+                    "label": "Charsi",
+                    "value": "Charsi"
+                },
+                {
+                    "label": "Gheed",
+                    "value": "Gheed"
+                }
+            ]
+        },
+        {
+            "id": "a1SorceressOrbsVendor",
+            "type": "select",
+            "name": "Sorceress Orbs Vendor",
+            "defaultValue": "Gheed",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Akara",
+                    "value": "Akara"
+                },
+                {
+                    "label": "Charsi",
+                    "value": "Charsi"
+                },
+                {
+                    "label": "Gheed",
+                    "value": "Gheed"
+                }
+            ]
+        },
+        {
+            "id": "a1BarbarianHelmsVendor",
+            "type": "select",
+            "name": "Barbarian Healms Vendor",
+            "defaultValue": "Akara",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Akara",
+                    "value": "Akara"
+                },
+                {
+                    "label": "Charsi",
+                    "value": "Charsi"
+                },
+                {
+                    "label": "Gheed",
+                    "value": "Gheed"
+                }
+            ]
+        },
+        {
+            "id": "a1NecromancerHeadsVendor",
+            "type": "select",
+            "name": "Necromancer Heads Vendor",
+            "defaultValue": "Akara",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Akara",
+                    "value": "Akara"
+                },
+                {
+                    "label": "Charsi",
+                    "value": "Charsi"
+                },
+                {
+                    "label": "Gheed",
+                    "value": "Gheed"
+                }
+            ]
+        },
+        {
+            "id": "a1PaladinShieldsVendor",
+            "type": "select",
+            "name": "Paladin Shields Vendor",
+            "defaultValue": "Akara",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Akara",
+                    "value": "Akara"
+                },
+                {
+                    "label": "Charsi",
+                    "value": "Charsi"
+                },
+                {
+                    "label": "Gheed",
+                    "value": "Gheed"
+                }
+            ]
+        },
+        {
+            "id": "a1DruidPeltsVendor",
+            "type": "select",
+            "name": "Druid Pelts Vendor",
+            "defaultValue": "Akara",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Akara",
+                    "value": "Akara"
+                },
+                {
+                    "label": "Charsi",
+                    "value": "Charsi"
+                },
+                {
+                    "label": "Gheed",
+                    "value": "Gheed"
+                }
+            ]
+        },
+        {
+            "id": "a1WarlockGrimoiresVendor",
+            "type": "select",
+            "name": "Warlock Grimoires Vendor",
+            "defaultValue": "Akara",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Akara",
+                    "value": "Akara"
+                },
+                {
+                    "label": "Charsi",
+                    "value": "Charsi"
+                },
+                {
+                    "label": "Gheed",
+                    "value": "Gheed"
+                }
+            ]
+        },
+        {
+            "id": "sectionAct2",
+            "type": "section",
+            "name": "Act II Vendors"
+        },
+        {
+            "id": "a2PotionsVendor",
+            "type": "select",
+            "name": "Potions Vendor",
+            "defaultValue": "Drognan",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Drognan",
+                    "value": "Drognan"
+                },
+                {
+                    "label": "Elzix",
+                    "value": "Elzix"
+                },
+                {
+                    "label": "Fara",
+                    "value": "Fara"
+                },
+                {
+                    "label": "Lysander",
+                    "value": "Lysander"
+                }
+            ]
+        },
+        {
+            "id": "a2CharmsVendor",
+            "type": "select",
+            "name": "Charms Vendor",
+            "defaultValue": "Drognan",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Drognan",
+                    "value": "Drognan"
+                },
+                {
+                    "label": "Elzix",
+                    "value": "Elzix"
+                },
+                {
+                    "label": "Fara",
+                    "value": "Fara"
+                },
+                {
+                    "label": "Lysander",
+                    "value": "Lysander"
+                }
+            ]
+        },
+        {
+            "id": "a2GemsVendor",
+            "type": "select",
+            "name": "Gems Vendor",
+            "defaultValue": "Drognan",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Drognan",
+                    "value": "Drognan"
+                },
+                {
+                    "label": "Elzix",
+                    "value": "Elzix"
+                },
+                {
+                    "label": "Fara",
+                    "value": "Fara"
+                },
+                {
+                    "label": "Lysander",
+                    "value": "Lysander"
+                }
+            ]
+        },
+        {
+            "id": "a2RunesVendor",
+            "type": "select",
+            "name": "Runes Vendor",
+            "defaultValue": "Drognan",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Drognan",
+                    "value": "Drognan"
+                },
+                {
+                    "label": "Elzix",
+                    "value": "Elzix"
+                },
+                {
+                    "label": "Fara",
+                    "value": "Fara"
+                },
+                {
+                    "label": "Lysander",
+                    "value": "Lysander"
+                }
+            ]
+        },
+        {
+            "id": "a2JewelsVendor",
+            "type": "select",
+            "name": "Jewels Vendor",
+            "defaultValue": "Drognan",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Drognan",
+                    "value": "Drognan"
+                },
+                {
+                    "label": "Elzix",
+                    "value": "Elzix"
+                },
+                {
+                    "label": "Fara",
+                    "value": "Fara"
+                },
+                {
+                    "label": "Lysander",
+                    "value": "Lysander"
+                }
+            ]
+        },
+        {
+            "id": "a2AmazonWeaponsVendor",
+            "type": "select",
+            "name": "Amazon Weapons Vendor",
+            "defaultValue": "Lysander",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Drognan",
+                    "value": "Drognan"
+                },
+                {
+                    "label": "Elzix",
+                    "value": "Elzix"
+                },
+                {
+                    "label": "Fara",
+                    "value": "Fara"
+                },
+                {
+                    "label": "Lysander",
+                    "value": "Lysander"
+                }
+            ]
+        },
+        {
+            "id": "a2AssassinKatarsVendor",
+            "type": "select",
+            "name": "Assassin Katars Vendor",
+            "defaultValue": "Lysander",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Drognan",
+                    "value": "Drognan"
+                },
+                {
+                    "label": "Elzix",
+                    "value": "Elzix"
+                },
+                {
+                    "label": "Fara",
+                    "value": "Fara"
+                },
+                {
+                    "label": "Lysander",
+                    "value": "Lysander"
+                }
+            ]
+        },
+        {
+            "id": "a2SorceressOrbsVendor",
+            "type": "select",
+            "name": "Sorceress Orbs Vendor",
+            "defaultValue": "Lysander",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Drognan",
+                    "value": "Drognan"
+                },
+                {
+                    "label": "Elzix",
+                    "value": "Elzix"
+                },
+                {
+                    "label": "Fara",
+                    "value": "Fara"
+                },
+                {
+                    "label": "Lysander",
+                    "value": "Lysander"
+                }
+            ]
+        },
+        {
+            "id": "a2BarbarianHelmsVendor",
+            "type": "select",
+            "name": "Barbarian Healms Vendor",
+            "defaultValue": "Drognan",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Drognan",
+                    "value": "Drognan"
+                },
+                {
+                    "label": "Elzix",
+                    "value": "Elzix"
+                },
+                {
+                    "label": "Fara",
+                    "value": "Fara"
+                },
+                {
+                    "label": "Lysander",
+                    "value": "Lysander"
+                }
+            ]
+        },
+        {
+            "id": "a2NecromancerHeadsVendor",
+            "type": "select",
+            "name": "Necromancer Heads Vendor",
+            "defaultValue": "Drognan",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Drognan",
+                    "value": "Drognan"
+                },
+                {
+                    "label": "Elzix",
+                    "value": "Elzix"
+                },
+                {
+                    "label": "Fara",
+                    "value": "Fara"
+                },
+                {
+                    "label": "Lysander",
+                    "value": "Lysander"
+                }
+            ]
+        },
+        {
+            "id": "a2PaladinShieldsVendor",
+            "type": "select",
+            "name": "Paladin Shields Vendor",
+            "defaultValue": "Drognan",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Drognan",
+                    "value": "Drognan"
+                },
+                {
+                    "label": "Elzix",
+                    "value": "Elzix"
+                },
+                {
+                    "label": "Fara",
+                    "value": "Fara"
+                },
+                {
+                    "label": "Lysander",
+                    "value": "Lysander"
+                }
+            ]
+        },
+        {
+            "id": "a2DruidPeltsVendor",
+            "type": "select",
+            "name": "Druid Pelts Vendor",
+            "defaultValue": "Drognan",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Drognan",
+                    "value": "Drognan"
+                },
+                {
+                    "label": "Elzix",
+                    "value": "Elzix"
+                },
+                {
+                    "label": "Fara",
+                    "value": "Fara"
+                },
+                {
+                    "label": "Lysander",
+                    "value": "Lysander"
+                }
+            ]
+        },
+        {
+            "id": "a2WarlockGrimoiresVendor",
+            "type": "select",
+            "name": "Warlock Grimoires Vendor",
+            "defaultValue": "Drognan",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Drognan",
+                    "value": "Drognan"
+                },
+                {
+                    "label": "Elzix",
+                    "value": "Elzix"
+                },
+                {
+                    "label": "Fara",
+                    "value": "Fara"
+                },
+                {
+                    "label": "Lysander",
+                    "value": "Lysander"
+                }
+            ]
+        },
+        {
+            "id": "sectionAct3",
+            "type": "section",
+            "name": "Act III Vendors"
+        },
+        {
+            "id": "a3PotionsVendor",
+            "type": "select",
+            "name": "Potions Vendor",
+            "defaultValue": "Ormus",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Alkor",
+                    "value": "Alkor"
+                },
+                {
+                    "label": "Asheara",
+                    "value": "Asheara"
+                },
+                {
+                    "label": "Hratli",
+                    "value": "Hratli"
+                },
+                {
+                    "label": "Ormus",
+                    "value": "Ormus"
+                }
+            ]
+        },
+        {
+            "id": "a3CharmsVendor",
+            "type": "select",
+            "name": "Charms Vendor",
+            "defaultValue": "Ormus",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Alkor",
+                    "value": "Alkor"
+                },
+                {
+                    "label": "Asheara",
+                    "value": "Asheara"
+                },
+                {
+                    "label": "Hratli",
+                    "value": "Hratli"
+                },
+                {
+                    "label": "Ormus",
+                    "value": "Ormus"
+                }
+            ]
+        },
+        {
+            "id": "a3GemsVendor",
+            "type": "select",
+            "name": "Gems Vendor",
+            "defaultValue": "Ormus",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Alkor",
+                    "value": "Alkor"
+                },
+                {
+                    "label": "Asheara",
+                    "value": "Asheara"
+                },
+                {
+                    "label": "Hratli",
+                    "value": "Hratli"
+                },
+                {
+                    "label": "Ormus",
+                    "value": "Ormus"
+                }
+            ]
+        },
+        {
+            "id": "a3RunesVendor",
+            "type": "select",
+            "name": "Runes Vendor",
+            "defaultValue": "Ormus",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Alkor",
+                    "value": "Alkor"
+                },
+                {
+                    "label": "Asheara",
+                    "value": "Asheara"
+                },
+                {
+                    "label": "Hratli",
+                    "value": "Hratli"
+                },
+                {
+                    "label": "Ormus",
+                    "value": "Ormus"
+                }
+            ]
+        },
+        {
+            "id": "a3JewelsVendor",
+            "type": "select",
+            "name": "Jewels Vendor",
+            "defaultValue": "Ormus",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Alkor",
+                    "value": "Alkor"
+                },
+                {
+                    "label": "Asheara",
+                    "value": "Asheara"
+                },
+                {
+                    "label": "Hratli",
+                    "value": "Hratli"
+                },
+                {
+                    "label": "Ormus",
+                    "value": "Ormus"
+                }
+            ]
+        },
+        {
+            "id": "a3AmazonWeaponsVendor",
+            "type": "select",
+            "name": "Amazon Weapons Vendor",
+            "defaultValue": "Alkor",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Alkor",
+                    "value": "Alkor"
+                },
+                {
+                    "label": "Asheara",
+                    "value": "Asheara"
+                },
+                {
+                    "label": "Hratli",
+                    "value": "Hratli"
+                },
+                {
+                    "label": "Ormus",
+                    "value": "Ormus"
+                }
+            ]
+        },
+        {
+            "id": "a3AssassinKatarsVendor",
+            "type": "select",
+            "name": "Assassin Katars Vendor",
+            "defaultValue": "Alkor",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Alkor",
+                    "value": "Alkor"
+                },
+                {
+                    "label": "Asheara",
+                    "value": "Asheara"
+                },
+                {
+                    "label": "Hratli",
+                    "value": "Hratli"
+                },
+                {
+                    "label": "Ormus",
+                    "value": "Ormus"
+                }
+            ]
+        },
+        {
+            "id": "a3SorceressOrbsVendor",
+            "type": "select",
+            "name": "Sorceress Orbs Vendor",
+            "defaultValue": "Alkor",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Alkor",
+                    "value": "Alkor"
+                },
+                {
+                    "label": "Asheara",
+                    "value": "Asheara"
+                },
+                {
+                    "label": "Hratli",
+                    "value": "Hratli"
+                },
+                {
+                    "label": "Ormus",
+                    "value": "Ormus"
+                }
+            ]
+        },
+        {
+            "id": "a3BarbarianHelmsVendor",
+            "type": "select",
+            "name": "Barbarian Healms Vendor",
+            "defaultValue": "Ormus",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Alkor",
+                    "value": "Alkor"
+                },
+                {
+                    "label": "Asheara",
+                    "value": "Asheara"
+                },
+                {
+                    "label": "Hratli",
+                    "value": "Hratli"
+                },
+                {
+                    "label": "Ormus",
+                    "value": "Ormus"
+                }
+            ]
+        },
+        {
+            "id": "a3NecromancerHeadsVendor",
+            "type": "select",
+            "name": "Necromancer Heads Vendor",
+            "defaultValue": "Alkor",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Alkor",
+                    "value": "Alkor"
+                },
+                {
+                    "label": "Asheara",
+                    "value": "Asheara"
+                },
+                {
+                    "label": "Hratli",
+                    "value": "Hratli"
+                },
+                {
+                    "label": "Ormus",
+                    "value": "Ormus"
+                }
+            ]
+        },
+        {
+            "id": "a3PaladinShieldsVendor",
+            "type": "select",
+            "name": "Paladin Shields Vendor",
+            "defaultValue": "Ormus",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Alkor",
+                    "value": "Alkor"
+                },
+                {
+                    "label": "Asheara",
+                    "value": "Asheara"
+                },
+                {
+                    "label": "Hratli",
+                    "value": "Hratli"
+                },
+                {
+                    "label": "Ormus",
+                    "value": "Ormus"
+                }
+            ]
+        },
+        {
+            "id": "a3DruidPeltsVendor",
+            "type": "select",
+            "name": "Druid Pelts Vendor",
+            "defaultValue": "Ormus",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Alkor",
+                    "value": "Alkor"
+                },
+                {
+                    "label": "Asheara",
+                    "value": "Asheara"
+                },
+                {
+                    "label": "Hratli",
+                    "value": "Hratli"
+                },
+                {
+                    "label": "Ormus",
+                    "value": "Ormus"
+                }
+            ]
+        },
+        {
+            "id": "a3WarlockGrimoiresVendor",
+            "type": "select",
+            "name": "Warlock Grimoires Vendor",
+            "defaultValue": "Alkor",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Alkor",
+                    "value": "Alkor"
+                },
+                {
+                    "label": "Asheara",
+                    "value": "Asheara"
+                },
+                {
+                    "label": "Hratli",
+                    "value": "Hratli"
+                },
+                {
+                    "label": "Ormus",
+                    "value": "Ormus"
+                }
+            ]
+        },
+        {
+            "id": "sectionAct4",
+            "type": "section",
+            "name": "Act IV Vendors"
+        },
+        {
+            "id": "a4PotionsVendor",
+            "type": "select",
+            "name": "Potions Vendor",
+            "defaultValue": "Jamella",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Halbu",
+                    "value": "Halbu"
+                },
+                {
+                    "label": "Jamella",
+                    "value": "Jamella"
+                }
+            ]
+        },
+        {
+            "id": "a4CharmsVendor",
+            "type": "select",
+            "name": "Charms Vendor",
+            "defaultValue": "Jamella",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Halbu",
+                    "value": "Halbu"
+                },
+                {
+                    "label": "Jamella",
+                    "value": "Jamella"
+                }
+            ]
+        },
+        {
+            "id": "a4GemsVendor",
+            "type": "select",
+            "name": "Gems Vendor",
+            "defaultValue": "Jamella",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Halbu",
+                    "value": "Halbu"
+                },
+                {
+                    "label": "Jamella",
+                    "value": "Jamella"
+                }
+            ]
+        },
+        {
+            "id": "a4RunesVendor",
+            "type": "select",
+            "name": "Runes Vendor",
+            "defaultValue": "Jamella",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Halbu",
+                    "value": "Halbu"
+                },
+                {
+                    "label": "Jamella",
+                    "value": "Jamella"
+                }
+            ]
+        },
+        {
+            "id": "a4JewelsVendor",
+            "type": "select",
+            "name": "Jewels Vendor",
+            "defaultValue": "Jamella",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Halbu",
+                    "value": "Halbu"
+                },
+                {
+                    "label": "Jamella",
+                    "value": "Jamella"
+                }
+            ]
+        },
+        {
+            "id": "a4AmazonWeaponsVendor",
+            "type": "select",
+            "name": "Amazon Weapons Vendor",
+            "defaultValue": "Halbu",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Halbu",
+                    "value": "Halbu"
+                },
+                {
+                    "label": "Jamella",
+                    "value": "Jamella"
+                }
+            ]
+        },
+        {
+            "id": "a4AssassinKatarsVendor",
+            "type": "select",
+            "name": "Assassin Katars Vendor",
+            "defaultValue": "Halbu",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Halbu",
+                    "value": "Halbu"
+                },
+                {
+                    "label": "Jamella",
+                    "value": "Jamella"
+                }
+            ]
+        },
+        {
+            "id": "a4SorceressOrbsVendor",
+            "type": "select",
+            "name": "Sorceress Orbs Vendor",
+            "defaultValue": "Halbu",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Halbu",
+                    "value": "Halbu"
+                },
+                {
+                    "label": "Jamella",
+                    "value": "Jamella"
+                }
+            ]
+        },
+        {
+            "id": "a4BarbarianHelmsVendor",
+            "type": "select",
+            "name": "Barbarian Healms Vendor",
+            "defaultValue": "Jamella",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Halbu",
+                    "value": "Halbu"
+                },
+                {
+                    "label": "Jamella",
+                    "value": "Jamella"
+                }
+            ]
+        },
+        {
+            "id": "a4NecromancerHeadsVendor",
+            "type": "select",
+            "name": "Necromancer Heads Vendor",
+            "defaultValue": "Halbu",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Halbu",
+                    "value": "Halbu"
+                },
+                {
+                    "label": "Jamella",
+                    "value": "Jamella"
+                }
+            ]
+        },
+        {
+            "id": "a4PaladinShieldsVendor",
+            "type": "select",
+            "name": "Paladin Shields Vendor",
+            "defaultValue": "Jamella",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Halbu",
+                    "value": "Halbu"
+                },
+                {
+                    "label": "Jamella",
+                    "value": "Jamella"
+                }
+            ]
+        },
+        {
+            "id": "a4DruidPeltsVendor",
+            "type": "select",
+            "name": "Druid Pelts Vendor",
+            "defaultValue": "Jamella",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Halbu",
+                    "value": "Halbu"
+                },
+                {
+                    "label": "Jamella",
+                    "value": "Jamella"
+                }
+            ]
+        },
+        {
+            "id": "a4WarlockGrimoiresVendor",
+            "type": "select",
+            "name": "Warlock Grimoires Vendor",
+            "defaultValue": "Halbu",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Halbu",
+                    "value": "Halbu"
+                },
+                {
+                    "label": "Jamella",
+                    "value": "Jamella"
+                }
+            ]
+        },
+        {
+            "id": "sectionAct5",
+            "type": "section",
+            "name": "Act V Vendors"
+        },
+        {
+            "id": "a5PotionsVendor",
+            "type": "select",
+            "name": "Potions Vendor",
+            "defaultValue": "Malah",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Anya",
+                    "value": "Anya"
+                },
+                {
+                    "label": "Larzuk",
+                    "value": "Larzuk"
+                },
+                {
+                    "label": "Malah",
+                    "value": "Malah"
+                }
+            ]
+        },
+        {
+            "id": "a5CharmsVendor",
+            "type": "select",
+            "name": "Charms Vendor",
+            "defaultValue": "Malah",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Anya",
+                    "value": "Anya"
+                },
+                {
+                    "label": "Larzuk",
+                    "value": "Larzuk"
+                },
+                {
+                    "label": "Malah",
+                    "value": "Malah"
+                }
+            ]
+        },
+        {
+            "id": "a5GemsVendor",
+            "type": "select",
+            "name": "Gems Vendor",
+            "defaultValue": "Malah",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Anya",
+                    "value": "Anya"
+                },
+                {
+                    "label": "Larzuk",
+                    "value": "Larzuk"
+                },
+                {
+                    "label": "Malah",
+                    "value": "Malah"
+                }
+            ]
+        },
+        {
+            "id": "a5RunesVendor",
+            "type": "select",
+            "name": "Runes Vendor",
+            "defaultValue": "Malah",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Anya",
+                    "value": "Anya"
+                },
+                {
+                    "label": "Larzuk",
+                    "value": "Larzuk"
+                },
+                {
+                    "label": "Malah",
+                    "value": "Malah"
+                }
+            ]
+        },
+        {
+            "id": "a5JewelsVendor",
+            "type": "select",
+            "name": "Jewels Vendor",
+            "defaultValue": "Malah",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Anya",
+                    "value": "Anya"
+                },
+                {
+                    "label": "Larzuk",
+                    "value": "Larzuk"
+                },
+                {
+                    "label": "Malah",
+                    "value": "Malah"
+                }
+            ]
+        },
+        {
+            "id": "a5AmazonWeaponsVendor",
+            "type": "select",
+            "name": "Amazon Weapons Vendor",
+            "defaultValue": "Larzuk",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Anya",
+                    "value": "Anya"
+                },
+                {
+                    "label": "Larzuk",
+                    "value": "Larzuk"
+                },
+                {
+                    "label": "Malah",
+                    "value": "Malah"
+                }
+            ]
+        },
+        {
+            "id": "a5AssassinKatarsVendor",
+            "type": "select",
+            "name": "Assassin Katars Vendor",
+            "defaultValue": "Larzuk",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Anya",
+                    "value": "Anya"
+                },
+                {
+                    "label": "Larzuk",
+                    "value": "Larzuk"
+                },
+                {
+                    "label": "Malah",
+                    "value": "Malah"
+                }
+            ]
+        },
+        {
+            "id": "a5SorceressOrbsVendor",
+            "type": "select",
+            "name": "Sorceress Orbs Vendor",
+            "defaultValue": "Larzuk",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Anya",
+                    "value": "Anya"
+                },
+                {
+                    "label": "Larzuk",
+                    "value": "Larzuk"
+                },
+                {
+                    "label": "Malah",
+                    "value": "Malah"
+                }
+            ]
+        },
+        {
+            "id": "a5BarbarianHelmsVendor",
+            "type": "select",
+            "name": "Barbarian Healms Vendor",
+            "defaultValue": "Malah",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Anya",
+                    "value": "Anya"
+                },
+                {
+                    "label": "Larzuk",
+                    "value": "Larzuk"
+                },
+                {
+                    "label": "Malah",
+                    "value": "Malah"
+                }
+            ]
+        },
+        {
+            "id": "a5NecromancerHeadsVendor",
+            "type": "select",
+            "name": "Necromancer Heads Vendor",
+            "defaultValue": "Larzuk",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Anya",
+                    "value": "Anya"
+                },
+                {
+                    "label": "Larzuk",
+                    "value": "Larzuk"
+                },
+                {
+                    "label": "Malah",
+                    "value": "Malah"
+                }
+            ]
+        },
+        {
+            "id": "a5PaladinShieldsVendor",
+            "type": "select",
+            "name": "Paladin Shields Vendor",
+            "defaultValue": "Malah",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Anya",
+                    "value": "Anya"
+                },
+                {
+                    "label": "Larzuk",
+                    "value": "Larzuk"
+                },
+                {
+                    "label": "Malah",
+                    "value": "Malah"
+                }
+            ]
+        },
+        {
+            "id": "a5DruidPeltsVendor",
+            "type": "select",
+            "name": "Druid Pelts Vendor",
+            "defaultValue": "Malah",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Anya",
+                    "value": "Anya"
+                },
+                {
+                    "label": "Larzuk",
+                    "value": "Larzuk"
+                },
+                {
+                    "label": "Malah",
+                    "value": "Malah"
+                }
+            ]
+        },
+        {
+            "id": "a5WarlockGrimoiresVendor",
+            "type": "select",
+            "name": "Warlock Grimoires Vendor",
+            "defaultValue": "Larzuk",
+            "options": [
+                {
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "Anya",
+                    "value": "Anya"
+                },
+                {
+                    "label": "Larzuk",
+                    "value": "Larzuk"
+                },
+                {
+                    "label": "Malah",
+                    "value": "Malah"
+                }
+            ]
+        }
+    ]
 }
