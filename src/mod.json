@@ -1,7 +1,7 @@
 {
     "$schema": "../config-schema.json",
     "name": "Super Vendors",
-    "description": "Make various items purchasable by vendors.",
+    "description": "Add various new items to the vendor sales list in the game.",
     "author": "Garrett HE",
     "website": "https://github.com/garrett-he/SuperVendors",
     "version": "1.0.1",

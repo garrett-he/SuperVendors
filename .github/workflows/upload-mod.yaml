@@ -11,7 +11,7 @@ on:
       description:
         description: 'Description for the release'
         required: false
-        default: "Make various items purchasable by vendors."
+        default: "Add various new items to the vendor sales list in the game."
       file_category:
         description: "File category for the release"
         required: false
